@@ -1,0 +1,79 @@
+//Exercise 1
+
+function convertTo(units, num) {
+  if (units === "cm") {
+    return num * 2.54;
+  } else if (units === "in"){
+    return num / 2.54;
+  }
+}
+
+//Exercise 2
+
+function displayBusTimes(busScheduleObj, busLine) {
+  return "The bus will arrive in the next [" + busScheduleObj[busLine] + "] minutes.";
+
+}
+
+//Exercise 3
+
+function addGenre(song, genre) {
+//song is the object
+//add a genre key (is the string value)
+song.genre = genre;
+}
+
+//Exercise 4
+
+function executiveSummary(email) {
+  //if length of string (email) is greater than 15
+if (email.length > 15) {
+  //return first 15 characters
+  return email.slice(0, 15);
+  //else return entire email
+} else {
+  return email;
+}
+}
+
+
+//Exercise 5
+
+function removePartyKillers(playlist) {
+//8 minutes in seconds = 480
+//create result variable
+var result = [];
+//iterate over array
+for (var i = 0; i < playlist.length; i++) {
+//if key duration is less than 480
+if (playlist[i].durationInSeconds < 480) {
+//push to result array
+result.push(playlist[i]);
+}
+}
+//return result
+return result;
+}
+
+
+//Exercise 6 >>> Did Not Complete
+
+function onlyPayForHealthyThings(foodList) {
+//iterate over given array of objects
+for (var i = 0; i < foodList.length; i++){
+//if keys lowSugar and lowSodium in nested obj do NOT both equal true
+if (foodList[i].nutritionalValue[lowSugar] !== true || foodList[i].nutritionalValue[lowSodium] !== true)
+//delete object at that index of the array
+delete foodList[i];
+//create healthyPrice variable
+var healthyPrice = 0;
+//iterate over modified array
+for (var i = 0; i < foodList.length; i++){
+//add values of each price key
+healthyPrice += foodList[i].price;
+//return healthyPrice
+}
+  }
+return healthyPrice;
+}
+
